@@ -1,0 +1,21 @@
+<ng-container *ngIf="matchingList$ | async as matchingList; else emptyTmpl">
+  <mat-card
+    *ngFor="let card of matchingList"
+  >
+    <mat-card-title-group>
+      <mat-card-title>{{card.name}}</mat-card-title>
+      <img [src]="'/assets/img/' + card.img" mat-card-sm-image>
+    </mat-card-title-group>
+    <mat-card-content>
+      {{card.description}}
+    </mat-card-content>
+  </mat-card>
+</ng-container>
+
+<ng-template #emptyTmpl>
+  <mat-card>
+    <mat-card-content>
+      Empty
+    </mat-card-content>
+  </mat-card>
+</ng-template>

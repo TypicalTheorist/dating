@@ -1,0 +1,40 @@
+<mat-card
+  *ngIf="card$ | async as card; else emptyTmpl"
+  class="card"
+>
+  <mat-card-header>
+    <mat-card-title>{{card.name}}</mat-card-title>
+  </mat-card-header>
+  <img [alt]="card.name" mat-card-image [src]="'/assets/img/' + card.img">
+  <mat-card-content>
+    <p>
+      {{card.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="card__buttons">
+    <button
+      (click)="sendReply(card.id, 'unmatched')"
+      color="primary"
+      mat-fab
+    >
+      <mat-icon aria-label="Dislike!">block</mat-icon>
+    </button>
+    <button
+      (click)="sendReply(card.id, 'matched')"
+      color="accent"
+      mat-fab
+    >
+      <mat-icon aria-label="Like!">favorite</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<ng-template #emptyTmpl>
+  <mat-card class="card">
+    <mat-card-content>
+      <p>
+        Empty
+      </p>
+    </mat-card-content>
+  </mat-card>
+</ng-template>

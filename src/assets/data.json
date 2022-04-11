@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "name": "Gloria Gonzales",
+    "age": 20,
+    "gender": "F",
+    "img": "f1.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, voluptatum."
+  },
+  {
+    "id": "2",
+    "name": "Chester Johnson",
+    "age": 31,
+    "gender": "M",
+    "img": "m2.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta doloremque facilis labore maxime nisi, quam rem! Tempore."
+  },
+  {
+    "id": "3",
+    "name": "Jennie Wallace",
+    "age": 31,
+    "gender": "F",
+    "img": "f2.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quidem quis sint."
+  },
+  {
+    "id": "4",
+    "name": "Chester Johnson",
+    "age": 21,
+    "gender": "M",
+    "img": "m1.jpg",
+    "description": "Lorem ipsum dolor."
+  }
+]

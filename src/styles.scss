@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+  --base-size: 8px;
+  --semi-md-size: calc(var(--base-size) * 1.5); //12
+  --md-size: calc(var(--base-size) * 2); // 16
+  --xlg-size: calc(var(--base-size) *4); // 32
+}
+
+html, body {
+  overflow: hidden; // prevent viewport scroll on ios
+  height: 100%;
+  background-color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--base-size);
+  padding-right: var(--base-size);
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    & + button {
+      margin-left: var(--xlg-size);
+    }
+  }
+}
